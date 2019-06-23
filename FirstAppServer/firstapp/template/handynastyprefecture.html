@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ prefecture_list.0.2 }}下辖郡县</title>
+</head>
+<body>
+    <table border="1" name="handynastyprefecture" style="text-align: center;width: 100%;height: 100%">
+        <tr style="text-align: center">
+            <th colspan="2" style="font-size: 50px">{{ prefecture_list.0.2 }}</th>
+        </tr>
+        <tr style="text-align: center">
+            <th>ID</th>
+            <th>郡国</th>
+        </tr>
+        {% for prefecture in prefecture_list %}
+            <tr style="text-align: center">
+                <th>{{ prefecture.0 }}</th>
+                <th>{{ prefecture.1 }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

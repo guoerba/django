@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'FirstAppServer',
+    'firstapp'
 ]
 
 MIDDLEWARE = [
@@ -55,12 +55,14 @@ ROOT_URLCONF = 'FirstAppServer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'firstapp/template'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+#首先，如果想在Django模板中使用Request数据，需要先在“settings.py”文件的“TEMPLATES”设置中包含相应的设置。Django2在创建项目的时候会自动包含这项配置，无需手动添加。
+#然后，在模板中我们就可以通过“request.xxx”去获取相应的数据。比如，session中的数据。在视图中，我们向session中写入的数据，可以在模板中直接调用。
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],

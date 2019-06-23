@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import re_path
+import firstapp.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    path('',firstapp.views.handynasty),
+    path('firsttemplate/',firstapp.views.firsttemplate),
+    path('handynasty/',firstapp.views.handynasty),
+    #path('handynastyprefecture/',firstapp.views.handynastyprefecture)
+    re_path(r'handynastyprefecture',firstapp.views.handynastyprefecture),
 ]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎</title>
+</head>
+<body>
+    <h1 style="text-align: center;font-family: aakar;font-size: 100px;" >Hello</h1>
+    <table id="table-total" style="width: 100%;height:100%;background-color: antiquewhite">
+        <tr id="div-left-input" style="width: 50%">
+            <th id="table-left-input">
+                <p style="text-align: center">search_dict {{ search_dict }}</p>
+            </th >
+            <th id="table-right-httpheader" style="width:50%">
+                <p style="text-align: left">
+                    request.scheme:&nbsp;&nbsp;&nbsp;           {{ request.scheme }}<br>
+                    request.body:&nbsp;&nbsp;&nbsp;             {{ request.body }}<br>
+                    request.path:&nbsp;&nbsp;&nbsp;             {{ request.path }}<br>
+                    request.path_info:&nbsp;&nbsp;&nbsp;        {{ request.path_info }}<br>
+                    request.method:&nbsp;&nbsp;&nbsp;           {{ request.method }}<br>
+                    request.encoding:&nbsp;&nbsp;&nbsp;         {{ request.encoding }}<br>-+
+                    request.content_type:&nbsp;&nbsp;&nbsp;     {{ request.content_type }}<br>
+                    request.content_params:&nbsp;&nbsp;&nbsp;   {{ request.content_params }}<br>
+                </p>
+            </th >
+        </tr>
+    </table>
+</body>
+</html>

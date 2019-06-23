@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汉朝郡县</title>
+</head>
+<body>
+    <h1>汉朝郡县制度的划分</h1>
+    <p>
+        <table border="1" style="text-align: center;width: 50%;height: 100%;left: 25%">
+            <tr>
+                <th>序号</th>
+                <th>州</th>
+            </tr>
+            {% for state in state_list %}
+                <tr>
+                    <th>{{ state.id }}</th>
+                    <th style="width: 50%">
+                        <form action="handynastyprefecture.html" method="get">
+                            <button type="submit" name="btn" value="{{ forloop.counter }}" style="width: 100%;height: 100%">{{ state.state }}</button>
+                        </form>
+                    </th>
+                </tr>
+            {% endfor %}
+        </table>
+    </p>
+</body>
+</html>
